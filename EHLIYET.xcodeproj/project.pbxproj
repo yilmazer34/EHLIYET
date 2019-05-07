@@ -13,9 +13,13 @@
 		882AB4C5228178360055221D /* EHLIYET.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 882AB4C3228178360055221D /* EHLIYET.xcdatamodeld */; };
 		882AB4C7228178370055221D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882AB4C6228178370055221D /* Assets.xcassets */; };
 		882AB4CA228178370055221D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882AB4C8228178370055221D /* LaunchScreen.storyboard */; };
+		9F24BD121EE214E87761BB06 /* Pods_EHLIYET.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3CCB2DE19A19B2D4ADD0B3 /* Pods_EHLIYET.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AD2D5BA54162B7BA7680C96 /* Pods-EHLIYET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHLIYET.release.xcconfig"; path = "Target Support Files/Pods-EHLIYET/Pods-EHLIYET.release.xcconfig"; sourceTree = "<group>"; };
+		5E3CCB2DE19A19B2D4ADD0B3 /* Pods_EHLIYET.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EHLIYET.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		818BAD3779B3DA5BE185B21F /* Pods-EHLIYET.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EHLIYET.debug.xcconfig"; path = "Target Support Files/Pods-EHLIYET/Pods-EHLIYET.debug.xcconfig"; sourceTree = "<group>"; };
 		882AB4B9228178360055221D /* EHLIYET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EHLIYET.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		882AB4BC228178360055221D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		882AB4BE228178360055221D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F24BD121EE214E87761BB06 /* Pods_EHLIYET.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A970E2D30D15A0584FEBE9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				818BAD3779B3DA5BE185B21F /* Pods-EHLIYET.debug.xcconfig */,
+				0AD2D5BA54162B7BA7680C96 /* Pods-EHLIYET.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		882AB4B0228178360055221D = {
 			isa = PBXGroup;
 			children = (
 				882AB4BB228178360055221D /* EHLIYET */,
 				882AB4BA228178360055221D /* Products */,
+				7A970E2D30D15A0584FEBE9B /* Pods */,
+				D2301784A4EE66D74F0FC8CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = EHLIYET;
 			sourceTree = "<group>";
 		};
+		D2301784A4EE66D74F0FC8CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E3CCB2DE19A19B2D4ADD0B3 /* Pods_EHLIYET.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 882AB4CE228178370055221D /* Build configuration list for PBXNativeTarget "EHLIYET" */;
 			buildPhases = (
+				D58BE7E862609140ED276A81 /* [CP] Check Pods Manifest.lock */,
 				882AB4B5228178360055221D /* Sources */,
 				882AB4B6228178360055221D /* Frameworks */,
 				882AB4B7228178360055221D /* Resources */,
+				EDA5F2760C2720ECC80FB1A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D58BE7E862609140ED276A81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EHLIYET-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDA5F2760C2720ECC80FB1A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EHLIYET/Pods-EHLIYET-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EHLIYET/Pods-EHLIYET-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		882AB4B5228178360055221D /* Sources */ = {
@@ -284,6 +360,7 @@
 		};
 		882AB4CF228178370055221D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 818BAD3779B3DA5BE185B21F /* Pods-EHLIYET.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +379,7 @@
 		};
 		882AB4D0228178370055221D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AD2D5BA54162B7BA7680C96 /* Pods-EHLIYET.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
