@@ -1,6 +1,7 @@
 
 
 import UIKit
+import CoreData
 
 struct iAgustos18 {
     let imgName: String
@@ -12,6 +13,11 @@ struct iAgustos18 {
 }
 
 class iAgustos18VC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    var lessonName:String = "4 Ağustos 2018 İlk Yardım"
+    var point: String = " "
+    
+    let allQuestions = iAgustos18Bank()
     
     var myCollectionView: UICollectionView!
     var questionsArray = [iAgustos18]()
@@ -58,7 +64,7 @@ class iAgustos18VC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title="4 Ağustos 2018 İlk Yardım"
+        self.title = lessonName
         self.view.backgroundColor=UIColor.black
         
         
@@ -97,16 +103,21 @@ class iAgustos18VC: UIViewController, UICollectionViewDelegate, UICollectionView
         self.view.addSubview(myCollectionView)
         
      
-        let que1 = iAgustos18(imgName: "img3", questionText: "I.Yüklerin üzerine yolcu bindirilmesi \nII. Kasanın yan ve arka kapaklarının kapalı olması \n III. Yüklerin sağlam olarak yerleştirilmiş ve bağlanmış olması \n\nKamyon, kamyonet ve römorklarda yükle birlikte yolcu taşınırken yukarıda veri- lenlerden hangilerinin yapılması zorun- ludur?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-        let que2 = iAgustos18(imgName: "img4", questionText: "What is 4 + 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-        let que3 = iAgustos18(imgName: "img2", questionText: "What is 6 / 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-        let que4 = iAgustos18(imgName: "img1", questionText: "What is 2 - 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-        let que5 = iAgustos18(imgName: "img2", questionText: "What is 12 x 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-        let que6 = iAgustos18(imgName: "img1", questionText: "What is the color of sky?",options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-        questionsArray = [que1,que2,que3,que4,que5,que6]
+        print("******************************************************************************************************************")
+        print("\(allQuestions.list)")
+//        print("\(allQuestions)")
+//        print("\(iAgustos18Bank.init().list)")
+     print("******************************************************************************************************************")
+//        let que1 = iAgustos18(imgName: "img3", questionText: "I.Yüklerin üzerine yolcu bindirilmesi \nII. Kasanın yan ve arka kapaklarının kapalı olması \n III. Yüklerin sağlam olarak yerleştirilmiş ve bağlanmış olması \n\nKamyon, kamyonet ve römorklarda yükle birlikte yolcu taşınırken yukarıda veri- lenlerden hangilerinin yapılması zorun- ludur?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
+//        let que2 = iAgustos18(imgName: "img4", questionText: "What is 4 + 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
+//        let que3 = iAgustos18(imgName: "img2", questionText: "What is 6 / 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
+//        let que4 = iAgustos18(imgName: "img1", questionText: "What is 2 - 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
+//        let que5 = iAgustos18(imgName: "img2", questionText: "What is 12 x 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
+//        let que6 = iAgustos18(imgName: "img1", questionText: "What is the color of sky?",options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
+//        questionsArray = [que1,que2,que3,que4,que5,que6]
+
         
         setupViews()
-        
         setupBottomConntrollers()
         setupTopConntrollers()
     }
@@ -141,11 +152,6 @@ class iAgustos18VC: UIViewController, UICollectionViewDelegate, UICollectionView
         if sender == btnNext && currentQuestionNumber == questionsArray.count {
             
             btnQuizFinishAction()
-            
-            //            let v=ResultVC()
-            //            v.score = score
-            //            v.totalScore = questionsArray.count
-            //            self.navigationController?.pushViewController(v, animated: false)
             return
         }
         
@@ -218,9 +224,70 @@ class iAgustos18VC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @objc func btnQuizFinishAction() {
         
-        AlertView.instance.showAlert(title: "SONUÇ", correct: "\(Correct)", inCorrect: "\(inCorrect)", Nil: "\((questionsArray.count) - (Correct + inCorrect))", alertType: .success)
+        point = String(format: "%.0f",(Float(100)/13) * Float(Correct))
+        let rateSuccess = "%" + String(format: "%.0f",(Float(self.Correct) / 13) * 100)
+        let rateCircle = Float(Correct) / 13
+        
+        let date = Date()
+        
+        let calender = Calendar.current
+        let day = calender.component(.day, from: date)
+        let month = calender.component(.month, from: date)
+        let years = calender.component(.year, from: date)
+        let hour = calender.component(.hour, from: date)
+        let minute = calender.component(.minute, from: date)
+        let saniye = calender.component(.second, from: date)
+        
+        var dateFormt: String = ""
+        var clock: String = ""
+        
+        dateFormt = "\(day).\(month).\(years)"
+        clock =  String(format: "%02d:%02d:%02d",hour,minute,saniye)
         
         
+        
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let contex = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Results")
+        
+        fetchRequest.predicate = NSPredicate(format: "lessonName = %@", self.lessonName)
+        
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do {
+            let results =  try contex.fetch(fetchRequest)
+            if results.count > 0 {
+                for result in results as! [NSManagedObject] {
+                    contex.delete(result)
+                    print("Core Data DELETE, <-- SUCCESS -->")
+                }
+            }
+        } catch  {
+            print(" DELETE <-- ERROR -->")
+        }
+        
+        let newArt  = NSEntityDescription.insertNewObject(forEntityName: "Results", into: contex)
+        
+        // Attributes
+        newArt.setValue(clock, forKey: "clock")
+        newArt.setValue(Correct, forKey: "correct")
+        newArt.setValue(dateFormt, forKey: "date")
+        newArt.setValue(inCorrect, forKey: "incorrect")
+        newArt.setValue(lessonName, forKey: "lessonName")
+        newArt.setValue(point, forKey: "point")
+        newArt.setValue(rateCircle, forKey: "rateC")
+        newArt.setValue(rateSuccess, forKey: "rateSuc")
+       
+        do {
+            try contex.save()
+            print("Core Data is Save <-- SUCCUSS -->")
+        } catch  {
+            print("Core Data, no save <-- ERROR -->")
+        }
+        
+       AlertView.instance.showAlert(title: "SONUÇ", correct: "\(Correct)", inCorrect: "\(inCorrect)", Nil: "\((questionsArray.count) - (Correct + inCorrect))", alertType: .success)
         
         performSegue(withIdentifier: "iAgst18", sender: self)
     }

@@ -12,6 +12,7 @@
 		882AB4C5228178360055221D /* EHLIYET.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 882AB4C3228178360055221D /* EHLIYET.xcdatamodeld */; };
 		882AB4C7228178370055221D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882AB4C6228178370055221D /* Assets.xcassets */; };
 		882AB4CA228178370055221D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882AB4C8228178370055221D /* LaunchScreen.storyboard */; };
+		884F2B422285F98700885C8F /* iAgustos18Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884F2B412285F98700885C8F /* iAgustos18Bank.swift */; };
 		88B0267F2284B7140021E2F7 /* iAgustos18VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B0267E2284B7140021E2F7 /* iAgustos18VC.swift */; };
 		88B026812284B72E0021E2F7 /* iAgustos18vcCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B026802284B72E0021E2F7 /* iAgustos18vcCell.swift */; };
 		88B026842284BAE80021E2F7 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B026822284BAE80021E2F7 /* AlertView.xib */; };
@@ -38,6 +39,7 @@
 		882AB4C6228178370055221D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		882AB4C9228178370055221D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		882AB4CB228178370055221D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		884F2B412285F98700885C8F /* iAgustos18Bank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iAgustos18Bank.swift; sourceTree = "<group>"; };
 		88B0267E2284B7140021E2F7 /* iAgustos18VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAgustos18VC.swift; sourceTree = "<group>"; };
 		88B026802284B72E0021E2F7 /* iAgustos18vcCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAgustos18vcCell.swift; sourceTree = "<group>"; };
 		88B026822284BAE80021E2F7 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		88C159BD2284982600E52529 /* ilkYardım */ = {
 			isa = PBXGroup;
 			children = (
+				884F2B412285F98700885C8F /* iAgustos18Bank.swift */,
 				88C159B922848E7200E52529 /* ilkyardim17Cell.swift */,
 				88C159B722848E6500E52529 /* ilkyardim17.swift */,
 				88C159C422849AA500E52529 /* QuizCVCell.swift */,
@@ -306,6 +309,7 @@
 				88B026852284BAE80021E2F7 /* AlertView.swift in Sources */,
 				882AB4C5228178360055221D /* EHLIYET.xcdatamodeld in Sources */,
 				88C159B822848E6500E52529 /* ilkyardim17.swift in Sources */,
+				884F2B422285F98700885C8F /* iAgustos18Bank.swift in Sources */,
 				88B026812284B72E0021E2F7 /* iAgustos18vcCell.swift in Sources */,
 				88B0CC0A228255AF0065424F /* CardView.swift in Sources */,
 			);

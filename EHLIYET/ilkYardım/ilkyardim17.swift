@@ -7,13 +7,26 @@
 //
 
 import UIKit
+import CoreData
 
 class ilkyardim17: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var ilkyardim17: UITableView!
+    
+    var lessonName:String = "4 Ağustos 2018 İlk Yardım"
+    
+    // Data Arrays
+    var lessonNameArray = [String]()
+    var correctArray = [Int16]()
+    var incorrectArray = [Int16]()
+    var pointArray = [Float]()
+    var rateSucArray = [String]()
+    var clockArray = [String]()
+    var rateCircleArray = [Float]()
+    var dateArray = [String]()
+    
     var coz:String = "Çözüldü"
     var cozNO:String = "Çözülmedi"
-    
-    @IBOutlet weak var ilkyardim17: UITableView!
     
     var correctAralik17 = Int()
     var incorrectAralik17 = Int()
@@ -84,8 +97,110 @@ class ilkyardim17: UIViewController, UITableViewDataSource, UITableViewDelegate 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getInfo()
+        setupDate()
+        setupDiagnostics()
+    }
+    
+    func getInfo() {
 
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let contex = appDelegate.persistentContainer.viewContext
 
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Results")
+        
+        fetchRequest.predicate = NSPredicate(format: "lessonName = %@", self.lessonName)
+        
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do {
+            let results =  try contex.fetch(fetchRequest)
+            if results.count > 0 {
+                for result in results as! [NSManagedObject] {
+                    if let correct = result.value(forKey: "correct") as? Int {
+                        correctAgustos18 = correct
+                    }
+                    if let incorrect = result.value(forKey: "incorrect") as? Int {
+                        incorrectAgustos18 = incorrect
+                    }
+                    if let point = result.value(forKey: "point") as? String {
+                        puanAgustos18 = "\(point)"
+                    }
+                    if let rateSuc = result.value(forKey: "rateSuc") as? Float {
+                        boTAgustos18 = "\(rateSuc)"
+                    }
+                    if let rateCirc = result.value(forKey: "rateC") as? Float {
+                        boAgustos18 = rateCirc
+                    }
+                }
+            }
+            print("Core Data Save, <-- SUCCESS -->")
+        } catch  {
+            print("No Save, <-- ERROR -->")
+        }
+    }
+    
+    func cozSetup() {
+        if correctAralik17 > 0 || incorrectAralik17 > 0 {
+            check = "check_vector1"
+            cozAralik17 = coz
+        } else {
+            cozAralik17 = cozNO
+        }
+        
+        if correctEkim17 > 0 || incorrectEkim17 > 0 {
+            check1 = "check_vector1"
+            cozEkim17 = coz
+        } else {
+            cozEkim17 = cozNO
+        }
+        
+        if correctTemmuz17 > 0 || incorrectTemmuz17 > 0 {
+            check2 = "check_vector1"
+            cozTemmuz17 = coz
+        } else {
+            cozTemmuz17 = cozNO
+        }
+        
+        if correctMayis17 > 0 || incorrectMayis17 > 0 {
+            check3 = "check_vector1"
+            cozMayis17 = coz
+        } else {
+            cozMayis17 = cozNO
+        }
+        
+        if correctSubat17 > 0 || incorrectSubat17 > 0 {
+            check4 = "check_vector1"
+            cozSubat17 = coz
+        } else {
+            cozSubat17 = cozNO
+        }
+        
+        if correctSubat18 > 0 || incorrectSubat18 > 0 {
+            check5 = "check_vector1"
+            cozSubat18 = coz
+        } else {
+            cozSubat18 = cozNO
+        }
+        
+        if correctNisan18 > 0 || incorrectNisan18 > 0 {
+            check6 = "check_vector1"
+            cozNisan18 = coz
+        } else {
+            cozNisan18 = cozNO
+        }
+        
+        if correctAgustos18 > 0 || incorrectAgustos18 > 0 {
+            check7 = "check_vector1"
+            cozAgustos18 = coz
+        } else {
+            cozAgustos18 = cozNO
+        }
+    }
+
+    func setupDate() {
+        
         puanSubat18 = String(format: "%.0f",(Float(100)/13) * Float(correctSubat18))
         puanAralik17 = String(format: "%.0f",(Float(100)/13) * Float(correctAralik17))
         puanEkim17 = String(format: "%.0f",(Float(100)/13) * Float(correctEkim17))
@@ -111,12 +226,10 @@ class ilkyardim17: UIViewController, UITableViewDataSource, UITableViewDelegate 
         puanNisan18 = String(format: "%.0f",(Float(100)/13) * Float(correctNisan18))
         boNisan18 = (Float(self.correctNisan18) / 13)
         boTNisan18 = "%" + String(format: "%.0f",(Float(self.correctNisan18) / 13) * 100)
-
-        puanAgustos18 = String(format: "%.0f",(Float(100)/13) * Float(correctAgustos18))
-     
-        boTAgustos18 = "%" + String(format: "%.0f",(Float(self.correctAgustos18) / 13) * 100)
         
-            setupDiagnostics()
+        puanAgustos18 = String(format: "%.0f",(Float(100)/13) * Float(correctAgustos18))
+        
+        boTAgustos18 = "%" + String(format: "%.0f",(Float(self.correctAgustos18) / 13) * 100)
     }
     
     private func setupDiagnostics() {
