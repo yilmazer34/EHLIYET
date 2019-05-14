@@ -14,10 +14,8 @@ struct iAgustos18 {
 
 class iAgustos18VC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var lessonName:String = "4 Ağustos 2018 İlk Yardım"
+    var lessonName:String = "iAgst18"
     var point: String = " "
-    
-    let allQuestions = iAgustos18Bank()
     
     var myCollectionView: UICollectionView!
     var questionsArray = [iAgustos18]()
@@ -64,7 +62,7 @@ class iAgustos18VC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = lessonName
+        self.title = "4 Ağustos 2018 İLK YARDIM"
         self.view.backgroundColor=UIColor.black
         
         
@@ -94,6 +92,7 @@ class iAgustos18VC: UIViewController, UICollectionViewDelegate, UICollectionView
         
         myCollectionView.delegate=self
         myCollectionView.dataSource=self
+//        myCollectionView.register(iAgustos18vcCell.self, forCellWithReuseIdentifier: "Cell")
         myCollectionView.register(iAgustos18vcCell.self, forCellWithReuseIdentifier: "Cell")
         myCollectionView.showsHorizontalScrollIndicator = false
         myCollectionView.translatesAutoresizingMaskIntoConstraints=false
@@ -102,19 +101,23 @@ class iAgustos18VC: UIViewController, UICollectionViewDelegate, UICollectionView
         
         self.view.addSubview(myCollectionView)
         
-     
-        print("******************************************************************************************************************")
-        print("\(allQuestions.list)")
-//        print("\(allQuestions)")
-//        print("\(iAgustos18Bank.init().list)")
-     print("******************************************************************************************************************")
-//        let que1 = iAgustos18(imgName: "img3", questionText: "I.Yüklerin üzerine yolcu bindirilmesi \nII. Kasanın yan ve arka kapaklarının kapalı olması \n III. Yüklerin sağlam olarak yerleştirilmiş ve bağlanmış olması \n\nKamyon, kamyonet ve römorklarda yükle birlikte yolcu taşınırken yukarıda veri- lenlerden hangilerinin yapılması zorun- ludur?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-//        let que2 = iAgustos18(imgName: "img4", questionText: "What is 4 + 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-//        let que3 = iAgustos18(imgName: "img2", questionText: "What is 6 / 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-//        let que4 = iAgustos18(imgName: "img1", questionText: "What is 2 - 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-//        let que5 = iAgustos18(imgName: "img2", questionText: "What is 12 x 2 ?", options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-//        let que6 = iAgustos18(imgName: "img1", questionText: "What is the color of sky?",options: ["A) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "B)Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "C) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması", "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 1, wrongAns: -1, isAnswered: false)
-//        questionsArray = [que1,que2,que3,que4,que5,que6]
+        let que1 = iAgustos18(imgName: "i18A1", questionText: "", options: ["A) Telaşlı ve tedirgin olması","B) İletişim becerilerinin zayıf olması","C) Önce çevrenin güvenliğini sağlaması","D) İnsan vücudu ile ilgili temel bilgilere sahip olması"], correctAns: 3, wrongAns: -1, isAnswered: false)
+        let que2 = iAgustos18(imgName: "i18A2", questionText: "", options: ["A) dolaşım","B) bilinç durumu","C) solunum","D) hava yolu açıklığı"], correctAns: 1, wrongAns: -1, isAnswered: false)
+        let que3 = iAgustos18(imgName: "i18A3", questionText: "", options: ["A) Yalnız I.","B) I ve II.","C) II ve III.","D) I, II ve III."], correctAns: 3, wrongAns: -1, isAnswered: false)
+        let que4 = iAgustos18(imgName: "i18A4", questionText: "", options: ["A) Şok pozisyonu","B) Yarı oturuş pozisyonu","C) Baş geri-çene yukarı pozisyonu","D) Yarı yüzükoyun-yan pozisyon"], correctAns: 2, wrongAns: -1, isAnswered: false)
+        let que5 = iAgustos18(imgName: "i18A5", questionText: "", options: ["A) 10","B) 20","C) 30","D) 40"], correctAns: 0, wrongAns: -1, isAnswered: false)
+        let que6 = iAgustos18(imgName: "i18A6", questionText: "", options: ["A) Kan şekeri düştüğünde","B) Tam tıkanma yaşadığında","C) Kanaması olduğunda","D) Kalbi durduğunda"], correctAns: 1, wrongAns: -1, isAnswered: false)
+        let que7 = iAgustos18(imgName: "i18A7", questionText: "", options: ["A) Kanamanın sızıntı şeklinde olması","B) Kanın koyu renkli ve küçük kabarcıklar şeklinde akması","C) Açık renkli kanın kalp atımları ile uyumlu olarak kesik kesik akması","D) Kanamanın fışkırma olmadan akması ve kısa sürede durdurulabilmesi"], correctAns: 2, wrongAns: -1, isAnswered: false)
+        let que8 = iAgustos18(imgName: "i18A8", questionText: "", options: ["A) Kanayan bölgeyi aşağI indirmek","B) Kanayan yer üzerine temiz bir bezle bastırmak","C) Uzuv kopması varsa boğucu sargı (turni-ke) uygulamak","Kanayan yere en yakın basınç noktasına baskı uygulamak"], correctAns: 0, wrongAns: -1, isAnswered: false)
+        let que9 = iAgustos18(imgName: "i18A9", questionText: "", options: ["A) Bilinç kontrolünün yapılması","B) Yaşam bulgularının sık sık izlenmesi","C) Dışarı çıkan organlarının içeri sokulmaya çalışılması","D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"], correctAns: 2, wrongAns: -1, isAnswered: false)
+        let que10 = iAgustos18(imgName: "i18A10", questionText: "", options: ["A) Çıkığın yerine oturtulmaya çalışılması","B) Eklemin düzeltildikten sonra tespit edilmesi","C) Çıkık olan bölgeye kuvvetli masaj yapılması","D) Bölgenin nabzının, deri renginin ve ısısının kontrol edilmesi"], correctAns: 3, wrongAns: -1, isAnswered: false)
+        let que11 = iAgustos18(imgName: "i18A11", questionText: "", options: ["A) Koma","B) Bayılma","C) Sara krizi","D) Ateşli havale"], correctAns: 1, wrongAns: -1, isAnswered: false)
+        let que12 = iAgustos18(imgName: "i18A12", questionText: "", options: ["A) Rentek manevrası",
+            "B) İtfaiyeci yöntemi ile omuzda taşıma",
+            "C) Ayak bileklerinden sürükleme yöntemi",
+            "D) Koltuk altından tutarak sürükleme yöntemi"], correctAns: 0, wrongAns: -1, isAnswered: false)
+    
+        questionsArray = [que1,que2,que3,que4,que5,que6,que7,que8,que9,que10,que11,que12]
 
         
         setupViews()
@@ -287,7 +290,7 @@ class iAgustos18VC: UIViewController, UICollectionViewDelegate, UICollectionView
             print("Core Data, no save <-- ERROR -->")
         }
         
-       AlertView.instance.showAlert(title: "SONUÇ", correct: "\(Correct)", inCorrect: "\(inCorrect)", Nil: "\((questionsArray.count) - (Correct + inCorrect))", alertType: .success)
+        AlertView.instance.showAlert(point: point,rateSuc: rateSuccess, rateC: rateCircle, correct: "\(Correct)", inCorrect: "\(inCorrect)", Nil: "\((questionsArray.count) - (Correct + inCorrect))", alertType: .success)
         
         performSegue(withIdentifier: "iAgst18", sender: self)
     }

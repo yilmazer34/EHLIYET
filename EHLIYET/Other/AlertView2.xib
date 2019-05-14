@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertView2" customModule="EHLIYET" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="1Zv-cq-lat" id="Gqh-cD-v5K"/>
+                <outlet property="errorLbl" destination="iqn-vu-8l1" id="TOW-FS-hdu"/>
+                <outlet property="img" destination="Foo-h4-qsY" id="lIk-6Q-1g3"/>
+                <outlet property="parentView" destination="iN0-l3-epB" id="omP-Xt-3ve"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="675"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dH-uJ-ZzU">
+                    <rect key="frame" x="0.0" y="0.0" width="440" height="675"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Zv-cq-lat" customClass="CardView" customModule="EHLIYET" customModuleProvider="target">
+                            <rect key="frame" x="30" y="182.5" width="380" height="310"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="errorIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Foo-h4-qsY">
+                                    <rect key="frame" x="160" y="-30" width="60" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="GVU-o8-JRp"/>
+                                        <constraint firstAttribute="height" constant="60" id="Pfb-va-VJy"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXY-jG-8FQ" customClass="RoundButton" customModule="EHLIYET" customModuleProvider="target">
+                                    <rect key="frame" x="85" y="262" width="210" height="40"/>
+                                    <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="KHR-78-eJx"/>
+                                    </constraints>
+                                    <state key="normal" title="TAMAM">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onClickDone:" destination="-1" eventType="touchUpInside" id="kWr-LC-cRb"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UYARI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksV-yl-b4s">
+                                    <rect key="frame" x="35" y="65" width="310" height="21"/>
+                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bir şifre yada parola girmeniz gerekiyor !..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqn-vu-8l1">
+                                    <rect key="frame" x="35" y="111" width="310" height="41"/>
+                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="310" id="2pY-OX-3uF"/>
+                                <constraint firstItem="iXY-jG-8FQ" firstAttribute="leading" secondItem="1Zv-cq-lat" secondAttribute="leading" constant="85" id="4iJ-bi-eST"/>
+                                <constraint firstItem="Foo-h4-qsY" firstAttribute="centerY" secondItem="1Zv-cq-lat" secondAttribute="top" id="8n0-Yw-Q6C"/>
+                                <constraint firstItem="Foo-h4-qsY" firstAttribute="centerX" secondItem="1Zv-cq-lat" secondAttribute="centerX" id="CeH-Lw-SsK"/>
+                                <constraint firstItem="iqn-vu-8l1" firstAttribute="leading" secondItem="1Zv-cq-lat" secondAttribute="leading" constant="35" id="JLA-FL-jHh"/>
+                                <constraint firstAttribute="trailing" secondItem="iXY-jG-8FQ" secondAttribute="trailing" constant="85" id="PIf-X6-J3r"/>
+                                <constraint firstItem="iXY-jG-8FQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iqn-vu-8l1" secondAttribute="bottom" constant="59" id="XGV-0i-xzq"/>
+                                <constraint firstItem="ksV-yl-b4s" firstAttribute="leading" secondItem="1Zv-cq-lat" secondAttribute="leading" constant="35" id="eeE-V2-aq3"/>
+                                <constraint firstAttribute="trailing" secondItem="iqn-vu-8l1" secondAttribute="trailing" constant="35" id="kf2-09-hns"/>
+                                <constraint firstAttribute="trailing" secondItem="ksV-yl-b4s" secondAttribute="trailing" constant="35" id="rRE-Q1-ut8"/>
+                                <constraint firstItem="iqn-vu-8l1" firstAttribute="top" secondItem="ksV-yl-b4s" secondAttribute="bottom" constant="25" id="rYt-U5-OKi"/>
+                                <constraint firstItem="ksV-yl-b4s" firstAttribute="top" secondItem="Foo-h4-qsY" secondAttribute="bottom" constant="35" id="tFQ-fu-Ozi"/>
+                                <constraint firstAttribute="bottom" secondItem="iXY-jG-8FQ" secondAttribute="bottom" constant="8" id="u0S-sn-JAP"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerradius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadownColor">
+                                    <color key="value" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="1Zv-cq-lat" firstAttribute="centerY" secondItem="4dH-uJ-ZzU" secondAttribute="centerY" id="AkD-ue-5oU"/>
+                        <constraint firstItem="1Zv-cq-lat" firstAttribute="leading" secondItem="4dH-uJ-ZzU" secondAttribute="leading" constant="30" id="EOU-ol-ljf"/>
+                        <constraint firstAttribute="trailing" secondItem="1Zv-cq-lat" secondAttribute="trailing" constant="30" id="R4L-GD-WXb"/>
+                        <constraint firstItem="1Zv-cq-lat" firstAttribute="centerX" secondItem="4dH-uJ-ZzU" secondAttribute="centerX" id="f7n-so-lBb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4dH-uJ-ZzU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9gn-tT-Zud"/>
+                <constraint firstItem="4dH-uJ-ZzU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZFF-Ic-jla"/>
+                <constraint firstItem="4dH-uJ-ZzU" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eaI-1y-mLE"/>
+                <constraint firstAttribute="bottom" secondItem="4dH-uJ-ZzU" secondAttribute="bottom" id="yQi-by-fE5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-126.08695652173914" y="4.3526785714285712"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="errorIcon" width="512" height="512"/>
+    </resources>
+</document>

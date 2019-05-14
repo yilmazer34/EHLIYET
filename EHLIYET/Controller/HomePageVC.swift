@@ -41,6 +41,8 @@ class HomePageVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
         if UserDefaults.standard.object(forKey: "val") != nil {
             self.score = UserDefaults.standard.object(forKey: "val") as! Int
         }

@@ -6,7 +6,12 @@ target 'EHLIYET' do
   use_frameworks!
 
 
-pod 'Parse'
+  pod 'Parse'
+  pod 'Firebase/Core'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging'
+  pod 'LGButton'
+
 
   # Pods for EHLIYET
 
