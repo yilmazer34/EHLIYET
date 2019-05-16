@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Parse
 
 struct tAgst18 {
     let imgName: String
@@ -68,7 +69,7 @@ class tAgst18VC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "4 Ağustos 2018 Araç Tekniği (Motor)"
+        self.title = "4 Ağustos 2018 Trafik ve Çevre"
         self.view.backgroundColor=UIColor.black
         
         self.navigationItem.hidesBackButton = true
@@ -310,6 +311,7 @@ class tAgst18VC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         point = String(format: "%.0f",(Float(100)/23) * Float(Correct))
         let rateSuccess = "%" + String(format: "%.0f",(Float(self.Correct) / 23) * 100)
         let rateCircle = Float(Correct) / 23
+        let userPoint = (Float(100)/23) * Float(Correct)
         
         let date = Date()
         
@@ -369,6 +371,16 @@ class tAgst18VC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         } catch  {
             print("Core Data, no save <-- ERROR -->")
         }
+        
+        let user = PFUser.current()
+        let pointObj = PFObject(className: "PointTab")
+        pointObj["lessonname"] = "4 Ağustos 2018 Trafik Adabı"
+        pointObj["point"] = userPoint
+        pointObj["userID"] = user?.objectId
+        pointObj["username"] = user!.username
+        pointObj["city"] = user?.object(forKey: "city")
+        pointObj["pimg"] = user?.object(forKey: "ProfileImage")
+        pointObj.saveEventually()
         
         AlertView.instance.showAlert(point: point,rateSuc: rateSuccess, rateC: rateCircle, correct: "\(Correct)", inCorrect: "\(inCorrect)", Nil: "\((questionsArray.count) - (Correct + inCorrect))", alertType: .success)
         

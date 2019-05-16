@@ -29,7 +29,7 @@ class LoginVC: UIViewController {
         PFUser.logInWithUsername(inBackground: nameTextF.text!, password: passwordTextF.text!) { (user, error) in
             UIViewController.removeSpinner(spinner: sv)
             if user != nil {
-//                self.loadHomeScreen()
+                self.loadHomeScreen()
             }else{
                 if let descrip = error?.localizedDescription{
                     print(descrip)
@@ -50,6 +50,14 @@ class LoginVC: UIViewController {
                 }
             }
         }
+        
+        
+    }
+    
+    func loadHomeScreen() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loggedInViewController = storyBoard.instantiateViewController(withIdentifier: "toHome") as! homeTabBarC
+        self.present(loggedInViewController, animated: true, completion: nil)
     }
     
     func displayErrorMessage(message:String) {
@@ -63,13 +71,4 @@ class LoginVC: UIViewController {
         }
         self.present(alertView, animated: true, completion:nil)
     }
-    
-    func loadHomeScreen(){
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let loggedInViewController = storyBoard.instantiateViewController(withIdentifier: "toHome") as! homeTabBarC
-        self.present(loggedInViewController, animated: true, completion: nil)
-        
-    }
-    
 }

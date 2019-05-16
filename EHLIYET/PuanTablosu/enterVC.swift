@@ -18,7 +18,9 @@ class enterVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         let currentUser = PFUser.current()
+        
         if currentUser != nil {
             let sv = UIViewController.displaySpinner(onView: self.view)
             UIViewController.removeSpinner(spinner: sv)
@@ -29,11 +31,9 @@ class enterVC: UIViewController {
     }
     
     func loadHomeScreen(){
-        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loggedInViewController = storyBoard.instantiateViewController(withIdentifier: "toHome") as! homeTabBarC
         self.present(loggedInViewController, animated: true, completion: nil)
-        
     }
     
     func displayErrorMessage(message:String) {

@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Parse
 
 class homeTabBarC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let user = PFUser.current()
+        print(user!.username as Any)
 
     }
 }

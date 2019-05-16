@@ -30,11 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.clientKey = "Es7VKBtHJcHNJ12VfzWs35jUCFPKjMgjDonzHZoZ"
             $0.server = "https://parseapi.back4app.com"
         }
+        
+       
+ 
+        
         Parse.initialize(with: parseConfig)
         
         let defaultACL = PFACL()
         defaultACL.hasPublicReadAccess = true
         defaultACL.hasPublicWriteAccess = true
+    
         PFACL.setDefault(defaultACL, withAccessForCurrentUser: true)
         
 //        saveInstallationObject()

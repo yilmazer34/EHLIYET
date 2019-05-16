@@ -32,7 +32,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Uygulamada fotoğraf eklemek için buna izin vermelisiniz.</string>
+	<string>Uygulamaya fotoğraf eklemek için buna izin vermelisiniz.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertToHome" customModule="EHLIYET" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ESd-RB-tj8">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="675"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBG-Z7-nlB">
+                    <rect key="frame" x="0.0" y="0.0" width="440" height="675"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQo-Ca-ORE" customClass="CardView" customModule="EHLIYET" customModuleProvider="target">
+                            <rect key="frame" x="30" y="182.5" width="380" height="310"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="errorIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MlK-w4-afS">
+                                    <rect key="frame" x="160" y="-30" width="60" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="mub-Or-pw1"/>
+                                        <constraint firstAttribute="width" constant="60" id="v6F-Fx-c5E"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVh-nK-Rf3" customClass="RoundButton" customModule="EHLIYET" customModuleProvider="target">
+                                    <rect key="frame" x="85" y="262" width="210" height="40"/>
+                                    <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="cF8-xa-1Np"/>
+                                    </constraints>
+                                    <state key="normal" title="TAMAM">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UYARI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEo-oA-rBI">
+                                    <rect key="frame" x="35" y="65" width="310" height="21"/>
+                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bir şifre yada parola girmeniz gerekiyor !..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2n-fq-aD7">
+                                    <rect key="frame" x="35" y="111" width="310" height="41"/>
+                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="I2n-fq-aD7" secondAttribute="trailing" constant="35" id="5iE-je-di4"/>
+                                <constraint firstItem="MlK-w4-afS" firstAttribute="centerX" secondItem="VQo-Ca-ORE" secondAttribute="centerX" id="8n3-IW-kbe"/>
+                                <constraint firstItem="PVh-nK-Rf3" firstAttribute="leading" secondItem="VQo-Ca-ORE" secondAttribute="leading" constant="85" id="Anv-1f-mSX"/>
+                                <constraint firstItem="MlK-w4-afS" firstAttribute="centerY" secondItem="VQo-Ca-ORE" secondAttribute="top" id="b4X-8U-nPY"/>
+                                <constraint firstItem="WEo-oA-rBI" firstAttribute="leading" secondItem="VQo-Ca-ORE" secondAttribute="leading" constant="35" id="gFD-5d-3bO"/>
+                                <constraint firstAttribute="trailing" secondItem="WEo-oA-rBI" secondAttribute="trailing" constant="35" id="gMp-Xs-ueK"/>
+                                <constraint firstItem="I2n-fq-aD7" firstAttribute="leading" secondItem="VQo-Ca-ORE" secondAttribute="leading" constant="35" id="jDu-y4-yI2"/>
+                                <constraint firstAttribute="bottom" secondItem="PVh-nK-Rf3" secondAttribute="bottom" constant="8" id="mJh-xz-LwT"/>
+                                <constraint firstAttribute="trailing" secondItem="PVh-nK-Rf3" secondAttribute="trailing" constant="85" id="rJk-GB-UuF"/>
+                                <constraint firstItem="PVh-nK-Rf3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I2n-fq-aD7" secondAttribute="bottom" constant="59" id="v9C-Yn-nSp"/>
+                                <constraint firstItem="WEo-oA-rBI" firstAttribute="top" secondItem="MlK-w4-afS" secondAttribute="bottom" constant="35" id="wcf-8k-3FJ"/>
+                                <constraint firstAttribute="height" constant="310" id="x9Q-ee-hEd"/>
+                                <constraint firstItem="I2n-fq-aD7" firstAttribute="top" secondItem="WEo-oA-rBI" secondAttribute="bottom" constant="25" id="zvN-W4-Ec4"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerradius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadownColor">
+                                    <color key="value" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="VQo-Ca-ORE" firstAttribute="centerY" secondItem="nBG-Z7-nlB" secondAttribute="centerY" id="428-BK-pAP"/>
+                        <constraint firstItem="VQo-Ca-ORE" firstAttribute="centerX" secondItem="nBG-Z7-nlB" secondAttribute="centerX" id="LtG-SJ-dkC"/>
+                        <constraint firstItem="VQo-Ca-ORE" firstAttribute="leading" secondItem="nBG-Z7-nlB" secondAttribute="leading" constant="30" id="bIm-0m-dHl"/>
+                        <constraint firstAttribute="trailing" secondItem="VQo-Ca-ORE" secondAttribute="trailing" constant="30" id="yae-wc-Jkw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nBG-Z7-nlB" firstAttribute="trailing" secondItem="1Wf-r3-Wre" secondAttribute="trailing" id="2KC-H4-jma"/>
+                <constraint firstAttribute="bottom" secondItem="nBG-Z7-nlB" secondAttribute="bottom" id="Jvn-Js-TKm"/>
+                <constraint firstItem="nBG-Z7-nlB" firstAttribute="leading" secondItem="1Wf-r3-Wre" secondAttribute="leading" id="Xkk-fE-1qA"/>
+                <constraint firstItem="nBG-Z7-nlB" firstAttribute="top" secondItem="ESd-RB-tj8" secondAttribute="top" id="kDN-je-C9w"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="1Wf-r3-Wre"/>
+            <point key="canvasLocation" x="-812" y="5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="errorIcon" width="512" height="512"/>
+    </resources>
+</document>

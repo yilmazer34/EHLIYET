@@ -11,6 +11,7 @@ target 'EHLIYET' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
   pod 'LGButton'
+  pod 'CRRefresh'
 
 
   # Pods for EHLIYET

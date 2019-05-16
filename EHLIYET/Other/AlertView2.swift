@@ -49,7 +49,6 @@ class AlertView2: UIView {
     @IBAction func onClickDone(_ sender: Any) {
         parentView.removeFromSuperview()
         print("AlertView2 Tamama tıklandı alert dialogda-2 ye")
-        
     }
     
 }

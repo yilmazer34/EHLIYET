@@ -29,13 +29,13 @@
 		887604FB2287471A009C34F7 /* SignTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887604F92287471A009C34F7 /* SignTextField.swift */; };
 		887604FD2287511E009C34F7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887604FC2287511E009C34F7 /* RoundButton.swift */; };
 		887604FF228751EB009C34F7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887604FE228751EB009C34F7 /* LoginVC.swift */; };
-		8876050122876904009C34F7 /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876050022876904009C34F7 /* LoggedInVC.swift */; };
 		8876050522876E14009C34F7 /* enterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876050422876E14009C34F7 /* enterVC.swift */; };
 		8876050722878F1C009C34F7 /* AlertView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8876050622878F1C009C34F7 /* AlertView2.xib */; };
 		8876050922878F32009C34F7 /* AlertView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876050822878F32009C34F7 /* AlertView2.swift */; };
 		8876050B2287A593009C34F7 /* homeTabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876050A2287A593009C34F7 /* homeTabBarC.swift */; };
 		8876050D2287A76B009C34F7 /* orderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876050C2287A76B009C34F7 /* orderVC.swift */; };
 		8876050F2287A7AC009C34F7 /* uploodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876050E2287A7AC009C34F7 /* uploodVC.swift */; };
+		888A99FF228B853D001146C2 /* OrderVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A99FE228B853D001146C2 /* OrderVCell.swift */; };
 		88B0267F2284B7140021E2F7 /* iAgustos18VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B0267E2284B7140021E2F7 /* iAgustos18VC.swift */; };
 		88B026812284B72E0021E2F7 /* iAgustos18vcCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B026802284B72E0021E2F7 /* iAgustos18vcCell.swift */; };
 		88B026842284BAE80021E2F7 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B026822284BAE80021E2F7 /* AlertView.xib */; };
@@ -46,6 +46,8 @@
 		88C159B822848E6500E52529 /* ilkyardim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C159B722848E6500E52529 /* ilkyardim.swift */; };
 		88C159BA22848E7200E52529 /* ilkyardimCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C159B922848E7200E52529 /* ilkyardimCell.swift */; };
 		88C159BC22848EDB00E52529 /* CirclePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C159BB22848EDB00E52529 /* CirclePath.swift */; };
+		88C8715B228AF7D500A67ABE /* AlertToHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C8715A228AF7D500A67ABE /* AlertToHome.swift */; };
+		88C8715D228AF83E00A67ABE /* AlertToHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C8715C228AF83E00A67ABE /* AlertToHome.xib */; };
 		9F24BD121EE214E87761BB06 /* Pods_EHLIYET.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3CCB2DE19A19B2D4ADD0B3 /* Pods_EHLIYET.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,13 +80,13 @@
 		887604F92287471A009C34F7 /* SignTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignTextField.swift; sourceTree = "<group>"; };
 		887604FC2287511E009C34F7 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		887604FE228751EB009C34F7 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		8876050022876904009C34F7 /* LoggedInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
 		8876050422876E14009C34F7 /* enterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enterVC.swift; sourceTree = "<group>"; };
 		8876050622878F1C009C34F7 /* AlertView2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView2.xib; sourceTree = "<group>"; };
 		8876050822878F32009C34F7 /* AlertView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView2.swift; sourceTree = "<group>"; };
 		8876050A2287A593009C34F7 /* homeTabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeTabBarC.swift; sourceTree = "<group>"; };
 		8876050C2287A76B009C34F7 /* orderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderVC.swift; sourceTree = "<group>"; };
 		8876050E2287A7AC009C34F7 /* uploodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploodVC.swift; sourceTree = "<group>"; };
+		888A99FE228B853D001146C2 /* OrderVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVCell.swift; sourceTree = "<group>"; };
 		88B0267E2284B7140021E2F7 /* iAgustos18VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAgustos18VC.swift; sourceTree = "<group>"; };
 		88B026802284B72E0021E2F7 /* iAgustos18vcCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAgustos18vcCell.swift; sourceTree = "<group>"; };
 		88B026822284BAE80021E2F7 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 		88C159B722848E6500E52529 /* ilkyardim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ilkyardim.swift; sourceTree = "<group>"; };
 		88C159B922848E7200E52529 /* ilkyardimCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ilkyardimCell.swift; sourceTree = "<group>"; };
 		88C159BB22848EDB00E52529 /* CirclePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclePath.swift; sourceTree = "<group>"; };
+		88C8715A228AF7D500A67ABE /* AlertToHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertToHome.swift; sourceTree = "<group>"; };
+		88C8715C228AF83E00A67ABE /* AlertToHome.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertToHome.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,8 @@
 				882AB4C8228178370055221D /* LaunchScreen.storyboard */,
 				8876050622878F1C009C34F7 /* AlertView2.xib */,
 				8876050822878F32009C34F7 /* AlertView2.swift */,
+				88C8715A228AF7D500A67ABE /* AlertToHome.swift */,
+				88C8715C228AF83E00A67ABE /* AlertToHome.xib */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -236,11 +242,11 @@
 			children = (
 				887604F82287471A009C34F7 /* SignUpVC.swift */,
 				887604FE228751EB009C34F7 /* LoginVC.swift */,
-				8876050022876904009C34F7 /* LoggedInVC.swift */,
 				8876050422876E14009C34F7 /* enterVC.swift */,
 				8876050A2287A593009C34F7 /* homeTabBarC.swift */,
 				8876050C2287A76B009C34F7 /* orderVC.swift */,
 				8876050E2287A7AC009C34F7 /* uploodVC.swift */,
+				888A99FE228B853D001146C2 /* OrderVCell.swift */,
 			);
 			path = PuanTablosu;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C8715D228AF83E00A67ABE /* AlertToHome.xib in Resources */,
 				882AB4CA228178370055221D /* LaunchScreen.storyboard in Resources */,
 				88B026842284BAE80021E2F7 /* AlertView.xib in Resources */,
 				8876050722878F1C009C34F7 /* AlertView2.xib in Resources */,
@@ -412,6 +419,7 @@
 				880DCBB92286E6B70032B631 /* trafikVCell.swift in Sources */,
 				882AB4BD228178360055221D /* AppDelegate.swift in Sources */,
 				88C159BC22848EDB00E52529 /* CirclePath.swift in Sources */,
+				88C8715B228AF7D500A67ABE /* AlertToHome.swift in Sources */,
 				88B2CDB1228184FA0068167E /* HomePageVC.swift in Sources */,
 				8876050B2287A593009C34F7 /* homeTabBarC.swift in Sources */,
 				88C159BA22848E7200E52529 /* ilkyardimCell.swift in Sources */,
@@ -423,7 +431,7 @@
 				884F2B4B2286CDC800885C8F /* motorCell.swift in Sources */,
 				887604FA2287471A009C34F7 /* SignUpVC.swift in Sources */,
 				8876050522876E14009C34F7 /* enterVC.swift in Sources */,
-				8876050122876904009C34F7 /* LoggedInVC.swift in Sources */,
+				888A99FF228B853D001146C2 /* OrderVCell.swift in Sources */,
 				882AB4C5228178360055221D /* EHLIYET.xcdatamodeld in Sources */,
 				88C159B822848E6500E52529 /* ilkyardim.swift in Sources */,
 				8876050922878F32009C34F7 /* AlertView2.swift in Sources */,
